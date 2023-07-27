@@ -1,9 +1,0 @@
-{
-  "name": "Chat_Bot Twitch",
-  "version": "1.0.0",
-  "main": "scriptMain.js",
-  "dependencies": {
-    "tmi.js": "^1.8.4"
-  },
-  "author": "Vitor-VX"
-}
