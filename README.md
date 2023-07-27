@@ -3,7 +3,7 @@ Chat Bot para Twitch - Um bot de bate-papo interativo para a plataforma Twitch, 
 
 # Chat Bot para Twitch
 
-![GitHub](https://github.com/Vitor-VX)
+![GitHub]([https://github.com/Vitor-VX](https://wallpapercave.com/wp/wp7439734.png))
 
 ## Descrição
 Esse bot é um Chat Bot interativo para a plataforma Twitch, focado em proporcionar jogos e interações divertidas para os espectadores durante as transmissões. Atualmente, o bot conta com três jogos, mas está em constante desenvolvimento e novos jogos e recursos serão adicionados em um futuro próximo.
