@@ -101,26 +101,26 @@ const black_Jack_Twitch = async (nomePlayer, canal, twitchClient) => {
                     distribuirCarta(base_Player_1, twitchClient, canal);
                     if (base_Player_1.pontos === 21 && base_Player_2.pontos > 0) {
                         verificarVencedor(base_Player_1, base_Player_2, twitchClient, canal);
-                        zerar_Pontos();
+                        zerar_Pontos(base_Player_1, base_Player_2);
                     } else if (base_Player_1.pontos > 21 && base_Player_2.pontos > 0 && tentativas_Player_1 >= 2 && tentativas_Player_2 >= 2) {
                         verificarVencedor(base_Player_1, base_Player_2, twitchClient, canal);
-                        zerar_Pontos();
+                        zerar_Pontos(base_Player_1, base_Player_2);
                     } else if (base_Player_1.pontos > 21 && tentativas_Player_1 >= 2 && tentativas_Player_2 >= 2) {
                         verificarVencedor(base_Player_2, base_Player_1, twitchClient, canal);
-                        zerar_Pontos();
+                        zerar_Pontos(base_Player_1, base_Player_2);
                     }
                 } else if (tags.username === base_Player_2.nome) {
                     tentativas_Player_2 += 1;
                     distribuirCarta(base_Player_2, twitchClient, canal);
                     if (base_Player_2.pontos === 21 && base_Player_1.pontos > 0) {
                         verificarVencedor(base_Player_1, base_Player_2, twitchClient, canal);
-                        zerar_Pontos();
+                        zerar_Pontos(base_Player_1, base_Player_2);
                     } else if (base_Player_2.pontos > 21 && base_Player_1.pontos > 0 && tentativas_Player_1 >= 2 && tentativas_Player_2 >= 2) {
                         verificarVencedor(base_Player_1, base_Player_2, twitchClient, canal);
-                        zerar_Pontos();
+                        zerar_Pontos(base_Player_1, base_Player_2);
                     } else if (base_Player_2.pontos > 21 && tentativas_Player_1 >= 2 && tentativas_Player_2 >= 2) {
                         verificarVencedor(base_Player_1, base_Player_2, twitchClient, canal);
-                        zerar_Pontos();
+                        zerar_Pontos(base_Player_1, base_Player_2);
                     }
                 }
             }
