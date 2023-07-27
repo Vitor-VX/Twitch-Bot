@@ -16,10 +16,10 @@ const arrayComandos = []
 const twitch = tmi.Client({
   options: { debug: true },
   identity: {
-    username: 'JoxsBot',
-    password: 'dqh7tr609no3gfh7ezy6hcrvnt0910'
+    username: 'NOME_DO_SEU_BOT',
+    password: 'SEU_TOKEN_DA_TWITCH_AQUI'
   },
-  channels: ['jvzx_']
+  channels: ['SEU CANAL DA TWITCH AQUI DENTRO']
 })
 
 //fazer conexao com o servidor da twitch
