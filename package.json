@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "scriptMain.js",
   "dependencies": {
-    "tmi.js": "^1.8.4"
+    "tmi.js": "^1.8.4",
+    "path": "^0.12.7"
   },
   "author": "Vitor-VX"
 }
