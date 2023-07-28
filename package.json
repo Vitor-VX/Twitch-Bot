@@ -4,7 +4,8 @@
   "main": "scriptMain.js",
   "dependencies": {
     "tmi.js": "^1.8.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "random-words": "^1.1.0"
   },
   "author": "Vitor-VX"
 }
