@@ -1,6 +1,6 @@
 /*
-========================GAME-ANAGRAMAS-PALAVRAS-AO-CONTRARIO=======================
-==========================Vitor-VX==============================
+=============GAME-ANAGRAMAS-PALAVRAS-AO-CONTRARIO=======
+======================Vitor-VX==========================
 */
 
 //definimos as variaveis globais que vao ser importantes para o codigo
