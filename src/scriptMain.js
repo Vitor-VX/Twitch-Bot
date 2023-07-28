@@ -36,7 +36,6 @@ twitch.on('message', (canal, tags, message, self) => {
   })
 
   twitchBotFunctions.handleCommand(message, arrayComandos, twitch);
-
   /*
   Aqui são os jogos para twitch -> no momento com 3 -> no futuro proximo terá mais! 
   Este bot, tem uma estrutura base -> adicionar/remover comandos
@@ -51,6 +50,9 @@ twitch.on('message', (canal, tags, message, self) => {
       break
     case '!forca':
       Game_Forca.forca(user, canal, twitch)
+      break
+    case '!anagramas':
+      Game_Anagramas.game_Anagramas(user, canal, twitch)
     default:
       break;
   }
