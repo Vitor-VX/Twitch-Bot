@@ -53,6 +53,7 @@ twitch.on('message', (canal, tags, message, self) => {
       break
     case '!anagramas':
       Game_Anagramas.game_Anagramas(user, canal, twitch)
+      break
     default:
       break;
   }
