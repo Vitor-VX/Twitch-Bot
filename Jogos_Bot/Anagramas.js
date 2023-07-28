@@ -1,3 +1,8 @@
+/*
+========================GAME-ANAGRAMAS-PALAVRAS-AO-CONTRARIO=======================
+==========================Vitor-VX==============================
+*/
+
 //definimos as variaveis globais que vao ser importantes para o codigo
 let palavras = ''
 let tentativas_Player = 4, indice_palavra = 0, tempo_Resposta = 100000
