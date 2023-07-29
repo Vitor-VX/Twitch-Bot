@@ -9,7 +9,7 @@ Esse bot é um Chat Bot interativo para a plataforma Twitch, focado em proporcio
 - Jogo 2: [Jogo da forca]
 - Jogo 3: [Adivinhar Números de 2-19]
 - Jogo 4: [Anagramas - Palavras ao-contrário]
--> [MAIS JOGOS EM BREVE]
+- -> [MAIS JOGOS EM BREVE]
 
 ## Instalação
 1. Clone este repositório em sua máquina local.
