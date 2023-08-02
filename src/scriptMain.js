@@ -4,10 +4,9 @@
 */
 
 const tmi = require('tmi.js')
+require('dotenv').config()
 const twitchBotFunctions = require('./twitchBotFunctions.js')
-const Game_blackJack = require('../Jogos_Bot/blackJack.js')
-const Game_Guessing = require('../Jogos_Bot/number_Guessing.js')
-const Game_Forca = require('../Jogos_Bot/jogoForca.js')
+const jogos = require('../Jogos_Bot/JogosFull.js')
 
 //variaveis globais essenciais
 const arrayComandos = []
@@ -16,10 +15,10 @@ const arrayComandos = []
 const twitch = tmi.Client({
   options: { debug: true },
   identity: {
-    username: 'NOME_DO_SEU_BOT',
-    password: 'SEU_TOKEN_DA_TWITCH_AQUI'
+    username: process.env.URSERNAME_TWITCH,
+    password: process.env.TOKEN_TWITCH_BOT
   },
-  channels: ['SEU CANAL DA TWITCH AQUI DENTRO']
+  channels: ['jvzx_']
 })
 
 //fazer conexao com o servidor da twitch
@@ -35,7 +34,7 @@ twitch.on('message', (canal, tags, message, self) => {
     return twitch.say(canal, `/me ${mensagem}`)
   })
 
-  twitchBotFunctions.handleCommand(message, arrayComandos, twitch);
+  twitchBotFunctions.handleCommand(message, arrayComandos, twitch, canal)
   /*
   Aqui são os jogos para twitch -> no momento com 3 -> no futuro proximo terá mais! 
   Este bot, tem uma estrutura base -> adicionar/remover comandos
@@ -43,16 +42,19 @@ twitch.on('message', (canal, tags, message, self) => {
   */
   switch (message.toLowerCase()) {
     case '!21':
-      Game_blackJack.black_Jack_Twitch(user, canal, twitch)
+      jogos.game_BlackJack(user, canal, twitch)
       break;
     case '!guessing':
-      Game_Guessing.number_Guessing(user, canal, twitch)
+      jogos.game_NumberGuessing(user, canal, twitch)
       break
     case '!forca':
-      Game_Forca.forca(user, canal, twitch)
+      jogos.game_JogoForca(user, canal, twitch)
       break
     case '!anagramas':
-      Game_Anagramas.game_Anagramas(user, canal, twitch)
+      jogos.game_Anagramas(user, canal, twitch)
+      break
+    case '!gamemath':
+      jogos.game_Matematica(user, canal, twitch)
       break
     default:
       break;

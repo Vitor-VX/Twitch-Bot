@@ -1,6 +1,1 @@
-[
-    {
-        "comando": "!Test02",
-        "conteudo": " Go"
-    }
-]
+[{"comando":"!teste","conteudo":" Hello"}]

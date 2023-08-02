@@ -27,12 +27,12 @@ const gravarCommands = (arquivo, comandos) => {
 };
 
 // Função para enviar mensagem no chat
-const enviarMensagemChat = (twitchClient, mensagem) => {
-    return twitchClient.say('jvzx_', `/me ${mensagem}`);
+const enviarMensagemChat = (twitchClient, canal, mensagem) => {
+    return twitchClient.say(canal, `/me ${mensagem}`);
 };
 
 // Função para executar os eventos do chat -> adicionar/excluir comandos
-const handleCommand = (message, arrayComandos, twitchClient) => {
+const handleCommand = (message, arrayComandos, twitchClient, canal) => {
     let comandos = message.toLowerCase();
 
     //variaveis importantes para os comandos
@@ -52,7 +52,7 @@ const handleCommand = (message, arrayComandos, twitchClient) => {
             if (comandoExistente) {
                 comandoExistente.conteudo = conteudo;
                 gravarCommands('comandosTwtich', arrayComandos); // Aqui adicionamos o nome do arquivo ao gravar os comandos
-                enviarMensagemChat(twitchClient, `Comando ${comando} atualizado com sucesso.`).catch(e => { console.log(`${e}`) });
+                enviarMensagemChat(twitchClient, canal, `Comando ${comando} atualizado com sucesso.`).catch(e => { console.log(`${e}`) });
             } else {
                 //nesse bloco se o comando não existir criamos um, em formato de arquitetura .json
                 const novoComando = {
@@ -62,10 +62,10 @@ const handleCommand = (message, arrayComandos, twitchClient) => {
                 //adicionamos a constante "novoComando" no array principal -> arrayComandos
                 arrayComandos.push(novoComando);
                 gravarCommands('comandosTwtich', arrayComandos); // Aqui adicionamos o nome do arquivo ao gravar os comandos
-                enviarMensagemChat(twitchClient, `Comando ${comando} adicionado com sucesso.`).catch(e => { console.log(`${e}`) });
+                enviarMensagemChat(twitchClient, canal, `Comando ${comando} adicionado com sucesso.`).catch(e => { console.log(`${e}`) });
             }
         } else {
-            enviarMensagemChat(twitchClient, 'É necessário fornecer um nome e um conteúdo para o comando.').catch(e => { console.log(`${e}`) });
+            enviarMensagemChat(twitchClient, canal, 'É necessário fornecer um nome e um conteúdo para o comando.').catch(e => { console.log(`${e}`) });
         }
     }
 
@@ -74,7 +74,7 @@ const handleCommand = (message, arrayComandos, twitchClient) => {
         const arrayComandoAdd = message.split(' ');
         //aqui usamos uma condicao para vericar se o comando contem um !Comando -> se nao tiver o comando da um return
         if (arrayComandoAdd.length < 2) {
-            enviarMensagemChat(twitchClient, 'É necessário fornecer o nome do comando para removê-lo.').catch(e => { console.log(`${e}`) });
+            enviarMensagemChat(twitchClient, canal, 'É necessário fornecer o nome do comando para removê-lo.').catch(e => { console.log(`${e}`) });
             return;
         }
 
@@ -89,12 +89,12 @@ const handleCommand = (message, arrayComandos, twitchClient) => {
             if (index !== -1) {
                 comandosExistentes.splice(index, 1);
                 gravarCommands('comandosTwtich', comandosExistentes); // Aqui adicionamos o nome do arquivo ao gravar os comandos
-                enviarMensagemChat(twitchClient, `Comando ${comandoRemove} removido com sucesso.`).catch(e => { console.log(`${e}`) });
+                enviarMensagemChat(twitchClient, canal, `Comando ${comandoRemove} removido com sucesso.`).catch(e => { console.log(`${e}`) });
             } else {
-                enviarMensagemChat(twitchClient, `Erro ao remover o comando ${comandoRemove}.`).catch(e => { console.log(`${e}`) });
+                enviarMensagemChat(twitchClient, canal, `Erro ao remover o comando ${comandoRemove}.`).catch(e => { console.log(`${e}`) });
             }
         } else {
-            enviarMensagemChat(twitchClient, `O comando ${comandoRemove} não foi encontrado.`).catch(e => { console.log(`${e}`) });
+            enviarMensagemChat(twitchClient, canal, `O comando ${comandoRemove} não foi encontrado.`).catch(e => { console.log(`${e}`) });
         }
     }
 };
