@@ -1,11 +1,11 @@
 {
-  "name": "Chat_Bot Twitch",
-  "version": "1.0.0",
+  "name": "Chat_Bot_Twitch",
+  "version": "1.3.0",
   "main": "scriptMain.js",
   "dependencies": {
     "tmi.js": "^1.8.4",
-    "path": "^0.12.7",
-    "random-words": "^1.1.0"
+    "mongoose": "^5.13.13",
+    "dotenv": "^10.0.0"
   },
   "author": "Vitor-VX"
 }
