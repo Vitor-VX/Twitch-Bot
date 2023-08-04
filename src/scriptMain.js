@@ -3,26 +3,13 @@
 ==========================@if_Vitor=======================
 */
 
-const tmi = require('tmi.js')
-require('dotenv').config()
+const twitch = require('../connectServerTwitch/connectServer')
 const twitchBotFunctions = require('./twitchBotFunctions.js')
 const jogos = require('../Jogos_Bot/JogosFull.js')
+const enviarMensagemChat = twitchBotFunctions.enviarMensagemChat
 
 //variaveis globais essenciais
 const arrayComandos = []
-
-//config do bot/twitch
-const twitch = tmi.Client({
-  options: { debug: true },
-  identity: {
-    username: process.env.URSERNAME_TWITCH,
-    password: process.env.TOKEN_TWITCH_BOT
-  },
-  channels: ['jvzx_']
-})
-
-//fazer conexao com o servidor da twitch
-twitch.connect().catch(error => console.log(error))
 
 //evento principal - mensagens no chat
 twitch.on('message', (canal, tags, message, self) => {
@@ -30,16 +17,8 @@ twitch.on('message', (canal, tags, message, self) => {
   //atribuindo a variavel user para verificacoes de usuarios
   const user = tags.username
 
-  const enviarMensagemChat = ((mensagem) => {
-    return twitch.say(canal, `/me ${mensagem}`)
-  })
-
   twitchBotFunctions.handleCommand(message, arrayComandos, twitch, canal)
-  /*
-  Aqui são os jogos para twitch -> no momento com 3 -> no futuro proximo terá mais! 
-  Este bot, tem uma estrutura base -> adicionar/remover comandos
-  Mas eu foquei mais na interação com o chat da transmissão  -> ficar mais interativo para os "espec"
-  */
+
   switch (message.toLowerCase()) {
     case '!21':
       jogos.game_BlackJack(user, canal, twitch)
@@ -61,12 +40,11 @@ twitch.on('message', (canal, tags, message, self) => {
   }
 
   //atribuimos 2 variaveis importantes para a verficacao do conteudo que irá ser mostrado no chat...
-  let verificCommand = twitchBotFunctions.lerComandosDoArquivo('comandosTwtich')
-  let comandoEncontrado = false;
+  let verificCommand = twitchBotFunctions.lerComandosDoArquivo('comandosTwtich'), comandoEncontrado = false
 
   for (e of verificCommand) {
     if (message.toLowerCase() === e.comando.toLowerCase()) {
-      enviarMensagemChat(e.conteudo);
+      enviarMensagemChat(twitch, canal, `${e.conteudo}`);
       comandoEncontrado = true;
       break;
     }
