@@ -22,10 +22,15 @@ TWITCH_CHANNEL=seu_canal_do_twitch
 MONGODB_USER=seu_user_mongodb
 MONGODB_PASSWORD=sua_senha_mongodb
 ```
-## Conectar ao seu próprio banco de dados
+## Instalação MongoDB
+  Faça ou crie sua conta no MongoDB:
 ```bash
-mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@seu-banco-de-dados.6awlvqi.mongodb.net/?retryWrites=true&w=majority
+https://cloud.mongodb.com
 ```
+## Conectando o Banco De Dados á aplicação:
+```bash
+```
+
 ## Instalação
 1. Clone este repositório em sua máquina local.
 2. Instale as dependências usando o gerenciador de pacotes [npm](https://www.npmjs.com/):
