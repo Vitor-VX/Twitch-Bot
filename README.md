@@ -27,9 +27,19 @@ MONGODB_PASSWORD=sua_senha_mongodb
 ```bash
 https://cloud.mongodb.com
 ```
-## Conectando o Banco De Dados á aplicação:
+## Conectando ao MongoDB:
+Ao criar sua conta, você já poderá criar seu banco de dados. Você irá clicar no botão "Create" e escolherá a primeira opção:
 ```bash
+Connecting with MongoDB Driver
 ```
+## Conectando ao Banco de Dados:
+Na segunda aba, você verá um link com um título parecido com este: "Add your connection string into your application code", com um link igual a este:
+```bash
+mongodb+srv://admin:<password>@nome-do-seu-banco-de-dados.6awlvqi.mongodb.net/?retryWrites=true&w=majority
+```
+
+## Observação
+Você não precisa instalar o npm install mongoose manualmente, o npm install já irá instalá-lo para você junto com as dependências do projeto!
 
 ## Instalação
 1. Clone este repositório em sua máquina local.
