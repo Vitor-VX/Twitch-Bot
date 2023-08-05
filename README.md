@@ -16,7 +16,7 @@ Será implementado o banco de dados MongoDB na próxima atualização do Bot, pa
 - -> [MAIS JOGOS EM BREVE]
 
 ## Integração com o MongoDB
-Na próxima atualização, o Twitch Bot integrará o banco de dados MongoDB para gerenciar comandos e jogos de maneira eficaz. O banco de dados permitirá armazenar e recuperar informações, tornando mais fácil adicionar, atualizar e remover comandos e jogos personalizados. Essa integração aprimorará a funcionalidade do bot e proporcionará uma experiência mais dinâmica tanto para os transmissores quanto para os espectadores.
+Nessa atualização, o Twitch Bot integrará o banco de dados MongoDB para gerenciar comandos e jogos de maneira eficaz. O banco de dados permitirá armazenar e recuperar informações, tornando mais fácil adicionar, atualizar e remover comandos e jogos personalizados. Essa integração aprimorará a funcionalidade do bot e proporcionará uma experiência mais dinâmica tanto para os transmissores quanto para os espectadores.
 
 ```makefile
 TWITCH_USERNAME=seu_nome_de_usuário_do_twitch
