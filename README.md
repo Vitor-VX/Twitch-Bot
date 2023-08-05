@@ -39,7 +39,7 @@ mongodb+srv://admin:<password>@nome-do-seu-banco-de-dados.6awlvqi.mongodb.net/?r
 ```
 
 ## Observação
-Você não precisa instalar o npm install mongoose manualmente, o npm install já irá instalá-lo para você junto com as dependências do projeto!
+Você não precisa instalar manualmente o pacote mongodb com npm install mongodb. O comando npm install irá instalar o Mongoose, a biblioteca que estamos utilizando no projeto, e ele será instalado automaticamente juntamente com as outras dependências do projeto! Precisamos exclusivamente do link que ele fornece ao final.
 
 ## Instalação
 1. Clone este repositório em sua máquina local.
