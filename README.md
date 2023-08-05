@@ -7,9 +7,6 @@ Esse bot é um Chat Bot interativo para a plataforma Twitch, focado em proporcio
 ## Info próxima atualização
 Será implementado o banco de dados MongoDB na próxima atualização do Bot, para manter os comandos/Gerenciar os jogos.
 
-## Integração com o MongoDB
-Na próxima atualização, o Twitch Bot integrará o banco de dados MongoDB para gerenciar comandos e jogos de maneira eficaz. O banco de dados permitirá armazenar e recuperar informações, tornando mais fácil adicionar, atualizar e remover comandos e jogos personalizados. Essa integração aprimorará a funcionalidade do bot e proporcionará uma experiência mais dinâmica tanto para os transmissores quanto para os espectadores.
-
 ## Jogos Disponíveis
 - Jogo 1: [Black Jack - 21]
 - Jogo 2: [Jogo da forca]
@@ -18,10 +15,15 @@ Na próxima atualização, o Twitch Bot integrará o banco de dados MongoDB para
 - Jogo 5: [Acertar a soma dos números]
 - -> [MAIS JOGOS EM BREVE]
 
+## Integração com o MongoDB
+Na próxima atualização, o Twitch Bot integrará o banco de dados MongoDB para gerenciar comandos e jogos de maneira eficaz. O banco de dados permitirá armazenar e recuperar informações, tornando mais fácil adicionar, atualizar e remover comandos e jogos personalizados. Essa integração aprimorará a funcionalidade do bot e proporcionará uma experiência mais dinâmica tanto para os transmissores quanto para os espectadores.
+
 ```makefile
 TWITCH_USERNAME=seu_nome_de_usuário_do_twitch
 TWITCH_TOKEN=seu_token_oauth_do_twitch
 TWITCH_CHANNEL=seu_canal_do_twitch
+MONGODB_USER=seu_user_mongodb
+MONGODB_PASSWORD=sua_senha_mongodb
 ```
 
 ## Instalação
