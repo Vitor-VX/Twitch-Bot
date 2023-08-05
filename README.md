@@ -4,8 +4,13 @@ Chat Bot para Twitch - Um bot de bate-papo interativo para a plataforma Twitch, 
 ## Descrição
 Esse bot é um Chat Bot interativo para a plataforma Twitch, focado em proporcionar jogos e interações divertidas para os espectadores durante as transmissões. Atualmente, o bot conta com quatro jogos, mas está em constante desenvolvimento e novos jogos e recursos serão adicionados em um futuro próximo.
 
-##  Info próxima atualização
-Será implementado o banco de dados MongoDb na próxima atualização do Bot, para manter os comandos/Gerenciar os jogos.
+## Integração com o MongoDB
+Na próxima atualização, o Twitch Bot integrará o banco de dados MongoDB para gerenciar comandos e jogos de maneira eficaz. O banco de dados permitirá armazenar e recuperar informações, tornando mais fácil adicionar, atualizar e remover comandos e jogos personalizados. Essa integração aprimorará a funcionalidade do bot e proporcionará uma experiência mais dinâmica tanto para os transmissores quanto para os espectadores.
+
+```makefile
+TWITCH_USERNAME=seu_nome_de_usuário_do_twitch
+TWITCH_TOKEN=seu_token_oauth_do_twitch
+TWITCH_CHANNEL=seu_canal_do_twitch
 
 ## Jogos Disponíveis
 - Jogo 1: [Black Jack - 21]
