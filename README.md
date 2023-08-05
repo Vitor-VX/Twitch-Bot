@@ -18,6 +18,12 @@ Na próxima atualização, o Twitch Bot integrará o banco de dados MongoDB para
 - Jogo 5: [Acertar a soma dos números]
 - -> [MAIS JOGOS EM BREVE]
 
+```makefile
+TWITCH_USERNAME=seu_nome_de_usuário_do_twitch
+TWITCH_TOKEN=seu_token_oauth_do_twitch
+TWITCH_CHANNEL=seu_canal_do_twitch
+```
+
 ## Instalação
 1. Clone este repositório em sua máquina local.
 2. Instale as dependências usando o gerenciador de pacotes [npm](https://www.npmjs.com/):
