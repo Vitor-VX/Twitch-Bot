@@ -10,7 +10,7 @@ Esse bot é um Chat Bot interativo para a plataforma Twitch, focado em proporcio
 - Jogo 3: [Adivinhar Números de 2-19]
 - Jogo 4: [Anagramas - Palavras ao-contrário]
 - Jogo 5: [Acertar a soma dos números]
-- -> [MAIS JOGOS EM BREVE]
+- [MAIS JOGOS EM BREVE]
 
 ## Integração com o MongoDB
 Nessa atualização, o Twitch Bot integrará o banco de dados MongoDB para gerenciar comandos e jogos de maneira eficaz. O banco de dados permitirá armazenar e recuperar informações, tornando mais fácil adicionar, atualizar e remover comandos e jogos personalizados. Essa integração aprimorará a funcionalidade do bot e proporcionará uma experiência mais dinâmica tanto para os transmissores quanto para os espectadores.
